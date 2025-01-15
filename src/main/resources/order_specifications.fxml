@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" stylesheets="@style_specs.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.SpecsController">
+    <Label text="Specifications" textFill="#b3001b">
+        <font>
+            <Font name="Cooper Black" size="24.0" />
+        </font>
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+    </Label>
+    <GridPane alignment="CENTER" hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #f2dfc2;" styleClass="grid-pane" vgap="20.0">
+        <columnConstraints>
+            <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+            <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="75.0" />
+            <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+            <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="75.0" />
+            <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+            <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="75.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+            <RowConstraints fillHeight="false" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints fillHeight="false" minHeight="-Infinity" prefHeight="0.0" />
+        </rowConstraints>
+        <children>
+            <Label text="Margherita revenue:" GridPane.rowIndex="1" />
+            <Label text="Margherita probability (%):" GridPane.rowIndex="3" />
+            <TextField fx:id="margRev" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="margProb" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Meatlover revenue:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Meatlover probability (%):" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="meatRev" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="meatProb" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label text="Vegan revenue:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label text="Vegan probability (%):" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField fx:id="vegRev" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextField fx:id="vegProb" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Label text="Small probability (%):" GridPane.rowIndex="5" />
+            <TextField fx:id="smallProb" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Medium probability (%):" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label text="Pizza types" textFill="#579467">
+                <font>
+                    <Font name="Cooper Black" size="18.0" />
+                </font>
+            </Label>
+            <TextField fx:id="medProb" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label text="Large probability (%):" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <TextField fx:id="largeProb" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Label text="Water revenue:" GridPane.rowIndex="7" />
+            <TextField fx:id="waterRev" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="sodaRev" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <TextField fx:id="beerRev" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Label text="Soda revenue:" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Label text="Beer revenue:" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <TextField fx:id="waterProb" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="sodaProb" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <TextField fx:id="beerProb" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+            <Label text="Water probability (%)" GridPane.rowIndex="9" />
+            <Label text="Soda probability (%):" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Label text="Beer probability (%):" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+            <Label text="Sizes" textFill="#579467" GridPane.rowIndex="4">
+                <font>
+                    <Font name="Cooper Black" size="18.0" />
+                </font>
+            </Label>
+            <Label text="Drinks" textFill="#579467" GridPane.rowIndex="6">
+                <font>
+                    <Font name="Cooper Black" size="18.0" />
+                </font>
+            </Label>
+            <Label text="Margherita expense:" GridPane.rowIndex="2" />
+            <Label text="Meatlover expense:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Vegan expense:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField fx:id="margExp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="meatExp" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="vegExp" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Label text="Water expense:" GridPane.rowIndex="8" />
+            <Label text="Soda expense:" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Label text="Beer expense:" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <TextField fx:id="waterExp" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="sodaExp" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <TextField fx:id="beerExp" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+         <Label text="Distributions" textFill="#579467" GridPane.rowIndex="10">
+            <font>
+               <Font name="Cooper Black" size="18.0" />
+            </font>
+         </Label>
+         <Label text="Mean" GridPane.rowIndex="11" />
+         <Label text="Variance" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+         <TextField fx:id="meanAmount" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+         <TextField fx:id="varianceAmount" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+        </children>
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+    </GridPane>
+    <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="400.0" spacing="20.0">
+        <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSave" text="Save and return" />
+         <Button mnemonicParsing="false" onAction="#resetValues" text="Reset" />
+            <Label fx:id="errorLabel" textFill="#b3001b" />
+        </children>
+    </HBox>
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+</VBox>

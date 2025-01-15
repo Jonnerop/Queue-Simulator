@@ -1,0 +1,34 @@
+.root {
+    -fx-background-color: #F3C98B;
+}
+
+.label {
+    -fx-text-fill: #B3001B;
+}
+
+.button {
+    -fx-background-color: #73A580;
+    -fx-text-fill: white;
+}
+
+.choice-box, checkbox {
+    -fx-border-color: #B3001B;
+    -fx-background-color: white;
+}
+
+.text-field {
+    -fx-border-color: #B3001B;
+}
+
+.grid-pane {
+    -fx-background-color: #f2dfc2;
+    -fx-border-color: #f2dfc2;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+}
+
+.pane {
+    -fx-background-color: #f2dfc2;
+}
+

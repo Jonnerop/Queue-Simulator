@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="base" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="965.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Controller">
+    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="965.0" spacing="20.0">
+        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="320.0" spacing="10.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+           <children>
+              <Label text="Pizza Rex">
+                 <font>
+                    <Font name="Cooper Black" size="24.0" />
+                 </font>
+              </Label>
+              <GridPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="grid-pane">
+                <columnConstraints>
+                  <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                  <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                  <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                  <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                  <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                    <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                    <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                   <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                </rowConstraints>
+                 <children>
+                    <Label text="Simulation time (in days):" />
+                    <Label text="Delay (ms):" GridPane.rowIndex="1" />
+                    <Label text="Table amount:" GridPane.rowIndex="2" />
+                    <TextField fx:id="simuTime" GridPane.columnIndex="1" />
+                    <TextField fx:id="delay" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <TextField fx:id="tableAmount" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <Label text="Waiter amount:" GridPane.rowIndex="3" />
+                    <Label text="Chef amount:" GridPane.rowIndex="4" />
+                    <TextField fx:id="waiterAmount" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <TextField fx:id="chefAmount" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <Button fx:id="specButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openSpecWindow" prefHeight="25.0" prefWidth="90.0" text="Specifications" GridPane.rowIndex="5">
+                      <GridPane.margin>
+                         <Insets top="10.0" />
+                      </GridPane.margin>
+                   </Button>
+                 </children>
+                 <VBox.margin>
+                    <Insets top="20.0" />
+                 </VBox.margin>
+              </GridPane>
+              <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="280.0">
+                <columnConstraints>
+                  <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="140.0" />
+                  <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="140.0" />
+                </columnConstraints>
+                <rowConstraints>
+                  <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                  <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                </rowConstraints>
+                 <children>
+                    <Label text="Top Pizza of the Day:" />
+                    <ChoiceBox fx:id="topPizzaBox" prefWidth="150.0" value="None" GridPane.columnIndex="1" />
+                   <CheckBox mnemonicParsing="false" onAction="#toggleDiscountDay" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                   <Label text="Discount Day:" GridPane.rowIndex="1" />
+                 </children>
+                 <VBox.margin>
+                    <Insets bottom="20.0" top="20.0" />
+                 </VBox.margin>
+              </GridPane>
+             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                <children>
+                    <Button fx:id="startButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartSimu" prefHeight="35.0" prefWidth="190.0" text="Start Simulation">
+                      <font>
+                         <Font size="16.0" />
+                      </font>
+                      <padding>
+                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                      </padding>
+                   </Button>
+                   <Label fx:id="errorLabel" wrapText="true" />
+                </children>
+             </HBox>
+              <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="190.0" spacing="10.0">
+                 <children>
+                    <Button fx:id="addSpeedButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addSpeed" prefHeight="25.0" prefWidth="90.0" text="Add Speed" />
+                    <Button fx:id="slowDownButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#slowDown" prefHeight="25.0" prefWidth="90.0" text="Slow Down" />
+                 </children>
+              </HBox>
+              <Button fx:id="resetButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#resetSimu" prefHeight="25.0" prefWidth="90.0" text="Reset" />
+            <ImageView fitHeight="200.0" fitWidth="241.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="55.0" />
+               </VBox.margin>
+            </ImageView>
+           </children>
+        </VBox>
+       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
+          <children>
+             <Pane fx:id="customerArrival" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" />
+             <Pane fx:id="pizzaQueue" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" />
+             <Label text="Results:">
+                <font>
+                   <Font name="Cooper Black" size="18.0" />
+                </font>
+                <VBox.margin>
+                   <Insets top="20.0" />
+                </VBox.margin>
+             </Label>
+             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+                <children>
+                   <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="grid-pane">
+                     <columnConstraints>
+                       <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                       <ColumnConstraints fillWidth="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="75.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                       <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                       <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                       <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="15.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="15.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="15.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="15.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="15.0" />
+                         <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+                     </rowConstraints>
+                      <children>
+                         <Label text="Expenses:" GridPane.rowIndex="1" />
+                         <Label text="Net Profit:" GridPane.rowIndex="2" />
+                         <Label fx:id="revenueAmount" text="0" GridPane.columnIndex="1" />
+                         <Label text="Revenue:" />
+                         <Label fx:id="expensesAmount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                         <Label fx:id="netProfitAmount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                         <Label text="Customers arrived (A):" GridPane.rowIndex="6" />
+                         <Label fx:id="totalTimeLabel" text="Simulation time (T) (min):" GridPane.rowIndex="4" />
+                         <Label fx:id="readyCustomersLabel" text="Customers served (C):" GridPane.rowIndex="9" />
+                         <Label text="Active time (B) (min):" GridPane.rowIndex="15" />
+                         <Label fx:id="totalTimeAmount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                         <Label fx:id="readyCustomersAmount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                         <Label fx:id="activeTimeAmount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+                         <Label fx:id="arrivedCustomersAmount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                         <Label text="Takeaways arrived (A):" GridPane.rowIndex="7" />
+                         <Label text="Takeaways completed: (C)" GridPane.rowIndex="10" />
+                         <Label fx:id="readyTakeAwaysAmount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                         <Label fx:id="arrivedTakeAwaysAmount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                         <Label text="Customer avg troughput:" GridPane.rowIndex="12" />
+                         <Label text="Takeaway avg throughput:" GridPane.rowIndex="13" />
+                         <Label fx:id="customerAvgThroughput" text="0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                         <Label fx:id="takeAwayAvgThroughput" text="0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                      </children>
+                   </GridPane>
+                   <StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="275.0">
+                      <children>
+                         <GridPane fx:id="resultPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="grid-pane">
+                           <columnConstraints>
+                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="165.0" />
+                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="75.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                             <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                               <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                            <children>
+                               <Label text="Service throughput (X):" />
+                               <Label text="Utilization (U):" GridPane.rowIndex="1" />
+                               <Label GridPane.rowIndex="2" />
+                               <Label text="Customer wait time (W) (min):" GridPane.rowIndex="2" />
+                               <Label text="Takeaway wait time (W) (min):" GridPane.rowIndex="3" />
+                               <Label text="Response time (R) (min):" GridPane.rowIndex="4" />
+                               <Label text="Avg queue length (N):" GridPane.rowIndex="5" />
+                               <Label fx:id="serviceThroughput" text="0" GridPane.columnIndex="1" />
+                               <Label fx:id="utilization" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                               <Label fx:id="customerWaitTime" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                               <Label fx:id="takeAwayWaitTime" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                               <Label fx:id="responseTime" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                               <Label fx:id="queueLength" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                            </children>
+                         </GridPane>
+                         <Pane fx:id="pizzaCharger" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin></Pane>
+                      </children>
+                   </StackPane>
+                </children>
+                <VBox.margin>
+                   <Insets />
+                </VBox.margin>
+             </HBox>
+          </children>
+       </VBox>
+       <padding>
+          <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+       </padding>
+    </HBox>
+</AnchorPane>
