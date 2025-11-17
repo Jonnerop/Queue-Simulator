@@ -4,7 +4,7 @@
 
 ---
 
-## 🌟 Features
+## Features
 
 - **Three-Phase Simulation**: Simulate real-world queue scenarios with detailed components.
 - **Data Analysis**: Generate outputs such as average waiting times, operational costs, and revenue insights.
@@ -14,7 +14,7 @@
 
 ---
 
-## 🔧 Technical Specifications
+## Technical Specifications
 
 - **Programming Language**: Java (JDK 8 or higher)
 - **Libraries**: JavaFX for GUI, Hibernate for database handling
@@ -24,7 +24,7 @@
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -61,7 +61,7 @@
 
 ---
 
-## 🛠 Usage
+## Usage
 
 1. **Launch the Application**: Open the project in your IDE and run `Main.java`.
 2. **Configure Simulation**: Adjust parameters such as worker counts, table availability, and menu prices.
@@ -70,7 +70,7 @@
 
 ---
 
-## ⚙️ Troubleshooting
+## Troubleshooting
 
 - **Build Issues**:
   - Ensure Maven and JDK are correctly installed.
@@ -81,14 +81,14 @@
 
 ---
 
-## 📖 Documentation
+## Documentation
 
 - [Project Document](./Project_Document.pdf)
 - [User Manual](./User_Manual.pdf)
 
 ---
 
-## ✨ Future Enhancements
+## Future Enhancements
 
 - Implement machine learning for predicting optimal configurations.
 - Extend support for multi-location simulations.
@@ -96,7 +96,7 @@
 
 ---
 
-## 🤝 Contributors
+## Contributors
 
 - **Ade Aiho**
 - **Heta Hartzell**
