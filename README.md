@@ -81,7 +81,7 @@
 
 ---
 
-## Documentation
+## Documentation (in Finnish)
 
 - [Project Document](./Project_Document.pdf)
 - [User Manual](./User_Manual.pdf)
