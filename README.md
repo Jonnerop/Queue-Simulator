@@ -88,14 +88,6 @@
 
 ---
 
-## Future Enhancements
-
-- Implement machine learning for predicting optimal configurations.
-- Extend support for multi-location simulations.
-- Integrate cloud-based analytics for deeper insights.
-
----
-
 ## Contributors
 
 - **Ade Aiho**
